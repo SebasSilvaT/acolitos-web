@@ -45,26 +45,15 @@ Si vas a continuar el desarrollo, este es el estado actual y lo que falta por pr
 - [x] Estructura de Base de Datos (Pestañas Users, Config, Schedule creadas).
 - [x] Interfaz de Administrador (Versión Visual con datos falsos/mock).
 - [x] Servicio de lectura de datos (`src/lib/data.ts`).
+- [x] Conectar Interfaz con Datos Reales (API Routes `/api/users`, `/api/schedule`).
+- [x] Implementar Algoritmo de Horarios (`/api/generate` básico implementado).
+- [x] Interfaz Móvil (Acólitos) (`/my-schedule` creada).
+- [x] Control de Asistencia (Implmentado en Dashboard).
 
 ### 📝 Por Hacer (Faltante)
+- [ ] Refinar algoritmo de horarios (optimización y balanceo).
+- [ ] Autenticación real (si se requiere más seguridad).
 
-#### 1. Conectar Interfaz con Datos Reales
-- **Actual**: `AdminDashboard.tsx` usa `src/lib/mockData.ts`.
-- **Tarea**: Crear API Routes (EJ: `/api/users`, `/api/schedule`) que usen `src/lib/data.ts` y actualizar el Dashboard para consumir estos endpoints (usando `useEffect` o React Server Components).
-
-#### 2. Implementar Algoritmo de Horarios
-- **Tarea**: Crear un endpoint `/api/generate` que:
-  1. Lea los usuarios activos de la hoja `Users`.
-  2. Filtre por las limitaciones (columna `limitations`).
-  3. Asigne acólitos a las misas definidas en `Config`.
-  4. Aplique la regla de "Misa Central" (todos los disponibles).
-  5. Guarde los resultados en la hoja `Schedule`.
-
-#### 3. Interfaz Móvil (Acólitos)
-- **Tarea**: Crear una página pública donde el acólito ingrese su nombre (o ID) y vea solo sus próximas misas.
-
-#### 4. Control de Asistencia
-- **Tarea**: Agregar checkbox en el Dashboard o vista de Maestro para marcar `Presente/Ausente` y guardar esto en la hoja `Schedule`.
 
 ---
 
